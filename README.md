@@ -36,7 +36,7 @@ Feel free to contribute and/or discuss presented ideas.
 |`SeDebug`| ***Admin*** | **PowerShell** | Duplicate the `lsass.exe` token.  | Script to be found at [FuzzySecurity](https://github.com/FuzzySecurity/PowerShell-Suite/blob/master/Conjure-LSASS.ps1) |
 |`SeDelegateSession-`<br>`UserImpersonate`| ? | ? | ? | Privilege name broken to make the column narrow. |
 |`SeEnableDelegation`| None | - | - | The privilege is not used in the Windows OS. |
-|`SeImpersonate`| ? | ? | ? ||
+|`SeImpersonate`| Admin | 3rd party tool | Service accounts usually have special privileges (SeImpersonatePrivileges) and this could be used to escalate privileges(*potatoes*). |https://foxglovesecurity.com/2016/09/26/rotten-potato-privilege-escalation-from-service-accounts-to-system/|
 |`SeIncreaseBasePriority`| Availability | ***Built-in commands*** | `start /realtime SomeCpuIntensiveApp.exe` | May be more interesting on servers. |
 |`SeIncreaseQuota`| Availability | 3rd party tool | Change cpu, memory, and cache limits to some values making the OS unbootable. | - Quotas are not checked in the safe mode, which makes repair relatively easy.<br> - The same privilege is used for managing registry quotas. |
 |`SeIncreaseWorkingSet`| None | - | - | Privilege held by everyone. Checked when calling fine-tuning memory management functions. |
